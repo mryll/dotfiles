@@ -27,9 +27,11 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+alias ytop='ytop -I 5 -c monokai -p -a'
 
-export PATH="${PATH}:${HOME}/.dotnet:${HOME}/.dotnet/tools"
+export PATH="${PATH}:${HOME}/.dotnet:${HOME}/.dotnet/tools:${HOME}/bin"
 export DOTNET_ROOT=$(dirname $(realpath $(which dotnet)))
+export EDITOR=nvim
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -77,3 +79,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 alias config='/usr/bin/git --git-dir=/home/mryll/.cfg/ --work-tree=/home/mryll'
+
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"

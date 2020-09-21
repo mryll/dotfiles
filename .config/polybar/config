@@ -34,8 +34,10 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = false
+dpi-x = 0
+dpi-y = 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -43,13 +45,13 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
-border-color = #00000000
+;border-size = 4
+;border-color = #00000000
 
 padding-left = 0
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
@@ -58,7 +60,7 @@ font-2 = siji:pixelsize=10;1
 font-3 = Weather Icons:pixelsize=10;1
 font-4 = Font Awesome 5 Pro:style=Regular:pixelsize=10;1
 
-modules-left = i3 
+modules-left = i3 xwindow
 modules-center = player-mpris-tail
 modules-right = filesystem backlight pulseaudio xkeyboard memory cpu wlan battery temperature date openweathermap-forecast powermenu 
 
@@ -69,13 +71,13 @@ tray-padding = 2
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
+;override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -105,6 +107,10 @@ click-middle = playerctl play-pause &
 
 [module/xwindow]
 type = internal/xwindow
+format = <label>
+format-background = ${colors.foreground-alt}
+format-foreground = #FFF
+format-padding = 4
 label = %title:0:30:...%
 
 [module/xkeyboard]
@@ -459,7 +465,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
