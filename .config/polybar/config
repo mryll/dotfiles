@@ -108,7 +108,7 @@ click-middle = playerctl play-pause &
 [module/xwindow]
 type = internal/xwindow
 format = <label>
-format-background = ${colors.foreground-alt}
+format-background = #383838
 format-foreground = #FFF
 format-padding = 4
 label = %title:0:30:...%
@@ -187,7 +187,7 @@ label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+label-visible-underline = #996C19
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
