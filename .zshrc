@@ -28,10 +28,12 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias ytop='ytop -I 5 -c monokai -p -a'
+alias xclip='xclip -i -sel p -f | xclip -i -sel c'
+alias msda1='udisksctl mount -b /dev/sda1'
 
 export PATH="${PATH}:${HOME}/.dotnet:${HOME}/.dotnet/tools:${HOME}/bin"
 export DOTNET_ROOT=$(dirname $(realpath $(which dotnet)))
-export EDITOR=nvim
+export EDITOR="nvim"
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -83,3 +85,33 @@ alias config='/usr/bin/git --git-dir=/home/mryll/.cfg/ --work-tree=/home/mryll'
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
+
+
+### ARCHIVE EXTRACTION
+# usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;      
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+
