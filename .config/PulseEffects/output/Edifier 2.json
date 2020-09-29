@@ -1,8 +1,8 @@
 {
     "spectrum": {
-        "show": "false",
+        "show": "true",
         "n-points": "100",
-        "height": "100",
+        "height": "200",
         "use-custom-color": "false",
         "fill": "true",
         "show-bar-border": "true",
@@ -29,7 +29,7 @@
         ]
     },
     "output": {
-        "blacklist": "",
+        "blocklist": "",
         "plugins_order": [
             "limiter",
             "autogain",
@@ -56,9 +56,9 @@
             "state": "true",
             "input-gain": "0",
             "output-gain": "0",
-            "amount": "2",
+            "amount": "4",
             "harmonics": "8.5",
-            "scope": "100",
+            "scope": "110",
             "floor": "20",
             "blend": "0",
             "floor-active": "true",
@@ -287,7 +287,7 @@
             "state": "false",
             "input-gain": "0",
             "output-gain": "0",
-            "amount": "0",
+            "amount": "6",
             "harmonics": "8.5",
             "scope": "7500",
             "ceil": "16000",
@@ -319,12 +319,12 @@
         },
         "limiter": {
             "state": "true",
-            "input-gain": "-4",
+            "input-gain": "-8",
             "limit": "0",
-            "lookahead": "5",
+            "lookahead": "10",
             "release": "50",
-            "auto-level": "false",
-            "asc": "false",
+            "auto-level": "true",
+            "asc": "true",
             "asc-level": "0.5",
             "oversampling": "1",
             "output-gain": "0"
@@ -577,11 +577,11 @@
         },
         "autogain": {
             "state": "false",
-            "detect-silence": "false",
+            "detect-silence": "true",
             "use-geometric-mean": "true",
             "input-gain": "0",
             "output-gain": "0",
-            "target": "-23",
+            "target": "-12",
             "weight-m": "1",
             "weight-s": "1",
             "weight-i": "1"

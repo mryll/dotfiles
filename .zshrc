@@ -31,7 +31,7 @@ alias ytop='ytop -I 5 -c monokai -p -a'
 alias xclip='xclip -i -sel p -f | xclip -i -sel c'
 alias msda1='udisksctl mount -b /dev/sda1'
 
-export PATH="${PATH}:${HOME}/.dotnet:${HOME}/.dotnet/tools:${HOME}/bin"
+export PATH="${PATH}:${HOME}/.dotnet:${HOME}/.dotnet/tools:${HOME}/bin:${HOME}/.gem/ruby/2.7.0/bin"
 export DOTNET_ROOT=$(dirname $(realpath $(which dotnet)))
 export EDITOR="nvim"
 
