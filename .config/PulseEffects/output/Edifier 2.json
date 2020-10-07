@@ -29,7 +29,9 @@
         ]
     },
     "output": {
-        "blocklist": "",
+        "blocklist": [
+            "Microsoft Teams - Preview"
+        ],
         "plugins_order": [
             "limiter",
             "autogain",
@@ -319,12 +321,12 @@
         },
         "limiter": {
             "state": "true",
-            "input-gain": "-8",
+            "input-gain": "-10",
             "limit": "0",
             "lookahead": "10",
             "release": "50",
-            "auto-level": "true",
-            "asc": "true",
+            "auto-level": "false",
+            "asc": "false",
             "asc-level": "0.5",
             "oversampling": "1",
             "output-gain": "0"
