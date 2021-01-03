@@ -27,13 +27,24 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+alias lrs='ls -lrS'
 alias ytop='ytop -I 5 -c monokai -p -a'
 alias xclip='xclip -i -sel p -f | xclip -i -sel c'
 alias msda1='udisksctl mount -b /dev/sda1'
+alias umsda1='udisksctl unmount -b /dev/sda1'
+alias ..='cd ..'
+alias ccat='pygmentize -g -O style=colorful,linenos=1'
+alias px='pwd | xclip'
 
 export PATH="${PATH}:${HOME}/.dotnet:${HOME}/.dotnet/tools:${HOME}/bin:${HOME}/.gem/ruby/2.7.0/bin"
 export DOTNET_ROOT=$(dirname $(realpath $(which dotnet)))
 export EDITOR="nvim"
+export ASPNETCORE_ENVIRONMENT="Local"
+export ANDROID_HOME="${HOME}/Android/Sdk"
+export PATH=$PATH:$ANDROID_HOME/emulator 
+export PATH=$PATH:$ANDROID_HOME/tools 
+export PATH=$PATH:$ANDROID_HOME/tools/bin 
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo

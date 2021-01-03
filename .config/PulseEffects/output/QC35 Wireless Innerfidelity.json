@@ -50,7 +50,8 @@
             "loudness",
             "maximizer",
             "filter",
-            "pitch"
+            "pitch",
+            "rnnoise"
         ],
         "bass_enhancer": {
             "state": "true",
@@ -437,6 +438,7 @@
             "state": "false",
             "fft": "4096",
             "std": "ISO226-2003",
+            "input": "0",
             "volume": "0"
         },
         "multiband_gate": {
@@ -521,7 +523,7 @@
             "state": "true",
             "input-gain": "0",
             "output-gain": "0",
-            "kernel-path": "\/home\/mryll\/.config\/PulseEffects\/irs\/Bose QuietComfort 35 (wireless) minimum phase 48000Hz.irs",
+            "kernel-path": "\/home\/mryll\/.config\/PulseEffects\/irs\/Bose QuietComfort 35 (wireless) minimum phase 44100Hz.irs",
             "ir-width": "100"
         },
         "crystalizer": {
@@ -612,6 +614,12 @@
             "output-gain": "0",
             "time-l": "0",
             "time-r": "0"
+        },
+        "rnnoise": {
+            "state": "false",
+            "input-gain": "0",
+            "output-gain": "0",
+            "model-path": ""
         }
     }
 }

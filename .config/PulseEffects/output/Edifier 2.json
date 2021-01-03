@@ -1,6 +1,6 @@
 {
     "spectrum": {
-        "show": "true",
+        "show": "false",
         "n-points": "100",
         "height": "200",
         "use-custom-color": "false",
@@ -29,9 +29,7 @@
         ]
     },
     "output": {
-        "blocklist": [
-            "Microsoft Teams - Preview"
-        ],
+        "blocklist": "",
         "plugins_order": [
             "limiter",
             "autogain",

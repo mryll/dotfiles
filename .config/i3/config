@@ -33,14 +33,14 @@ gaps outer 6
 #for_window [class="^.*"] border pixel 2
 
 # Only enable gaps on a workspace when there is at least one container
-smart_gaps on
+#smart_gaps on
 
 
 # Activate smart borders (always)
-smart_borders on
+#smart_borders on
 
 # Hide edge borders only if there is one window with no gaps
-hide_edge_borders smart_no_gaps
+#hide_edge_borders smart_no_gaps
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -193,9 +193,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the EXIT shortcut. Do you really want to EXIT i3?' -B 'Yes, EXIT' 'i3-msg exit'"
 
-bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'shutdown now'"
+bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'You pressed the SHUTDOWN shortcut. Do you really want to SHUTDOWN?' -B 'Yes, SHUTDOWN' 'shutdown now'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -236,5 +236,15 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # enable floating mode for all XTerm windows
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Galculator"] floating enable
 
 exec_always --no-startup-id "setxkbmap -layout us,latam; setxkbmap -option 'grp:alt_space_toggle'"
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #1DB954
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
